@@ -1,0 +1,13 @@
+Instalacion de node.
+
+Instalación de Angular CLI:
+npm install -g @angular/cli
+
+Creacion del proyecto:
+ng new mi-nuevo-proyecto-angular2
+
+Lanzar app en http://localhost:4200/:
+ng serve
+
+detener control + c
+
