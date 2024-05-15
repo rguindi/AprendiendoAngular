@@ -10,4 +10,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'PrimerProyecto';
+  atributo2 = 'Otro atributo';
+  visible = false;
+  decirAdios() {
+    this.visible = true;
+  }
 }

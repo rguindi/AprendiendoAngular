@@ -7,7 +7,14 @@ Creacion del proyecto:
 ng new mi-nuevo-proyecto-angular2
 
 Lanzar app en http://localhost:4200/:
-ng serve
+ng serve -o     //o par abrirse el navegador
+
+si no estamos autorizados a abrir scripts abrimos powershell como administrador
+Set-ExecutionPolicy Unrestricted
 
 detener control + c
+
+
+si no tenemos la carpeta node_modules
+npm install
 
