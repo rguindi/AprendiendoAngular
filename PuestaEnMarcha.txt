@@ -18,3 +18,16 @@ detener control + c
 si no tenemos la carpeta node_modules
 npm install
 
+Crear componentes:
+ng generate component nombreComponente
+ng g c nombreComponente      //Es lo mismo      -s //estilo inline  -t //html inline
+
+Instalar BootStrap
+npm install bootstrap --save
+npm install jquery --save
+npm install popper.js --save
+En angular.json:
+ "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap-grid.min.css"
+            ]
