@@ -1,5 +1,20 @@
 <p>Lista de personas (Componente personas)</p>
-<button class="btn btn-primary" [disabled]="deshabilitar">
+<button
+  class="btn btn-primary"
+  [disabled]="deshabilitar"
+  (click)="agregarPersona()"
+>
   Agregar persona
 </button>
+<p>{{ mensaje }}</p>
 <app-persona></app-persona>
+
+<label for="per">Título Persona</label>
+<input
+  type="text"
+  name="per"
+  id="per"
+  class="form-control"
+  [(ngModel)]="titulo"
+/>
+{{ titulo }}
