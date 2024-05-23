@@ -6,7 +6,12 @@
 >
   Agregar persona
 </button>
-<p>{{ mensaje }}</p>
+<p *ngIf="mostrar; else sinPersona">{{ mensaje }}</p>
+
+<ng-template #sinPersona>
+  <p>No se ha agredado ninguna persona</p>
+</ng-template>
+
 <app-persona></app-persona>
 
 <label for="per">Título Persona</label>

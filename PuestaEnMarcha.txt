@@ -41,3 +41,18 @@ En angular.json:
 dos direcciones;
 import { FormsModule  } from '@angular/forms';
   [(ngModel)] ="titulo"
+
+
+  CONDICIONAL
+import { CommonModule } from '@angular/common';
+
+<p *ngIf="condicional; else sinPersona">{{ mensaje }}</p>
+<ng-template #sinPersona>
+<p>No se ha agredado ninguna persona</p>
+</ng-template>
+
+
+FOR
+<div *ngFor="let persona of personas; let i = index">
+        {{ i + 1 }} {{ persona.nombre }} {{ persona.apellido }}
+      </div>
