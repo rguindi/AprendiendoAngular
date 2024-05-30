@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Raul</title>
+</head>
+<body>
+  <h1 class="text-center text-bg-danger">{{titulo}}</h1>
+  <div class="container">
+    <app-formulario
+    (resultadoSuma)="procesarResultado($event)"
+    ></app-formulario>
+    <app-resultado
+    [resultadoHijo]="resultadoPadre"
+    ></app-resultado>
+
+  </div>
+
+</body>
+</html>

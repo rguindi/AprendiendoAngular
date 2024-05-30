@@ -1,0 +1,28 @@
+<form action="" class="form">
+  <div class="form-outline">
+    <label class="form-label" for="primero"
+      >Primer número
+      <input
+        class="form-control"
+        name="primero"
+        id="primero"
+        type="number"
+        [(ngModel)]="operandoA"
+      />
+    </label>
+  </div>
+
+  <div class="form-outline">
+    <label class="form-label" for="segundo"
+      >Segundo número
+      <input
+        class="form-control"
+        name="segundo"
+        id="segundo"
+        type="number"
+        [(ngModel)]="operandoB"
+      />
+    </label>
+  </div>
+  <button type="submit" class="btn btn-success" (click)="sumar()">Sumar</button>
+</form>

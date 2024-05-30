@@ -56,3 +56,32 @@ FOR
 <div *ngFor="let persona of personas; let i = index">
         {{ i + 1 }} {{ persona.nombre }} {{ persona.apellido }}
       </div>
+
+
+INPUT  de padre a hijo
+
+Padre html:
+<app-persona *ngFor="let personaElemento of personas; let i = index"
+  [persona] = "personaElemento"
+  [indice] = "i"
+  >
+
+Hijo TS:
+  @Input() persona!: Persona;
+  @Input() indice!: number;
+
+
+OUTPUT hijo a padre
+hijo TS
+export class FormularioComponent  {
+  @Output() personaCreada = new EventEmitter<Persona>();
+}
+  this.personaCreada.emit(persona1);
+Padre html
+<app-formulario
+(personaCreada)= "personaAgregada($event)"
+></app-formulario>
+padre TS
+personaAgregada(persona: Persona){
+  this.personas.push(persona);
+}
