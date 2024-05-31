@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Persona } from './persona.model';
+import { PersonasService } from './PersonasSertvice.service';
+import { LogginService } from './LogginSertvice.service';
 
 
 @Component({
@@ -7,13 +9,17 @@ import { Persona } from './persona.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+  
   titulo = 'Listado de personas';
-  personas: Persona[] = [
-    new Persona('Raul', 'Ferrero'),
-    new Persona('Laura', 'Juarez'),
-  ];
-personaAgregada(persona: Persona){
-  this.personas.push(persona);
-}
+  personas: Persona[] = [];
+
+  constructor(private logginService: LogginService,private personasService: PersonasService){}
+
+  ngOnInit(): void {
+    this.personas = this.personasService.personas;
+  }
+
+
 }

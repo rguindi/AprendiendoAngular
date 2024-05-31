@@ -1,4 +1,4 @@
-Instalacion de node.
+------------------INSTALACION
 
 Instalación de Angular CLI:
 npm install -g @angular/cli
@@ -33,10 +33,21 @@ En angular.json:
             ]
 
 
+----------------------------EXPRESIONES Y BUCLES
+
 {{expresiones}}
+
 [disabled]="deshabilitar"     atributo valor de una variable
- (click)="agregarPersona()"   evento entre ()
-   (input)="modificarTitulo($event)"
+(click)="agregarPersona()"   evento entre ()
+(input)="modificarTitulo($event)"
+
+#referenciainput        En ts se recibe como HTMLInputElement
+
+En Ts se puede utilizar para recuperarlo:
+@ViewChild("referenciainput") nombreVariable: ElementRef;
+
+Luego se recupera el value con:
+this.nombreVariable.nativeElement
 
 dos direcciones;
 import { FormsModule  } from '@angular/forms';
@@ -58,6 +69,11 @@ FOR
       </div>
 
 
+
+
+
+
+----------------PASO DE VARIABLES O DATOS ENTRE ELEMENTOS
 INPUT  de padre a hijo
 
 Padre html:
@@ -85,3 +101,11 @@ padre TS
 personaAgregada(persona: Persona){
   this.personas.push(persona);
 }
+
+
+-------------INJECTION
+    constructor(private logginService:LogginService){}
+@Injectable()  Para agregar una injección dentro de otra
+
+Acordarse en app.module para que sea accesible desde toda la aplicación
+  providers: [LogginService, PersonasService],
