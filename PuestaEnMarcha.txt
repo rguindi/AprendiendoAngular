@@ -109,3 +109,26 @@ personaAgregada(persona: Persona){
 
 Acordarse en app.module para que sea accesible desde toda la aplicación
   providers: [LogginService, PersonasService],
+
+
+
+  ---------------ROutinG
+  ng g module app-routing
+
+  Se añaden las rutas:
+  const routes: Routes = [
+
+  {path: '', component: PersonasComponent},
+  {path:'personas', component: PersonasComponent},
+  {path:'personas/agregar', component: FormularioComponent},
+  {path:'personas/:id', component: FormularioComponent},
+]
+
+y se indica en el componente principal que se funciona con rutas
+
+  <router-outlet></router-outlet>
+
+  Tambien :
+      <a [routerLink]="['/personas', indice]">
+            {{ persona.nombre }} {{ persona.apellido }}
+          </a>
