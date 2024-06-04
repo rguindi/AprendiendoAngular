@@ -32,4 +32,9 @@
       Agregar
     </button>
   </div>
+  <div class="col">
+    <button *ngIf="index != null" type="submit" class="btn btn-danger" style="cursor: pointer" (click)="eliminarPersona()">
+      Eliminar
+    </button>
+  </div>
 </form>
